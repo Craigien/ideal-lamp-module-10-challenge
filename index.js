@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shapes = require('./Lib/shapes.js');
+const shapes = require('./lib/shapes.js');
 
 
 function getUserInput()
@@ -41,8 +41,8 @@ function getUserInput()
 
                 console.log(output);
 
-                fs.writeFile('./Examples/Circle.svg', output, (err) => 
-                    err ? console.error(err) : console.log("Successfully created circle")
+                fs.writeFile('./examples/logo.svg', output, (err) => 
+                    err ? console.error(err) : console.log("Generated logo.svg")
                 );
             }
 
@@ -52,8 +52,8 @@ function getUserInput()
 
                 console.log(output);
 
-                fs.writeFile('./Examples/Triangle.svg', output, (err) => 
-                    err ? console.error(err) : console.log("Successfully created triangle")
+                fs.writeFile('./examples/logo.svg', output, (err) => 
+                    err ? console.error(err) : console.log("Generated logo.svg")
                 );
             }
 
@@ -63,8 +63,8 @@ function getUserInput()
 
                 console.log(output);
 
-                fs.writeFile('./Examples/Square.svg', output, (err) => 
-                    err ? console.error(err) : console.log("Successfully created square")
+                fs.writeFile('./examples/logo.svg', output, (err) => 
+                    err ? console.error(err) : console.log("Generated logo.svg")
                 );
             }
         });
@@ -75,7 +75,5 @@ getUserInput();
 // To Do
 
 // Use JEST to confirm that user entered valid inputs before generating SVG file
-// Create classes for different shapes
-// Write SVG file
 // Comments
 // README
