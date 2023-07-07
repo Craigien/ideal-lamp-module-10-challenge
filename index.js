@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const shapes = require('./Lib/shapes.js');
 
 
 function getUserInput()
@@ -36,9 +37,35 @@ function getUserInput()
 
             if (response.shape === "Circle")
             {
-                const renderShape = new Circle(response.characters, response.textColor, response.shapeColor);
+                const output = shapes.createCircle(response.characters, response.textColor, response.shapeColor);
 
-                const output = renderShape.render();
+                console.log(output);
+
+                fs.writeFile('./Examples/Circle.svg', output, (err) => 
+                    err ? console.error(err) : console.log("Successfully created circle")
+                );
+            }
+
+            if (response.shape === "Triangle")
+            {
+                const output = shapes.createTriangle(response.characters, response.textColor, response.shapeColor);
+
+                console.log(output);
+
+                fs.writeFile('./Examples/Triangle.svg', output, (err) => 
+                    err ? console.error(err) : console.log("Successfully created triangle")
+                );
+            }
+
+            if (response.shape === "Square")
+            {
+                const output = shapes.createSquare(response.characters, response.textColor, response.shapeColor);
+
+                console.log(output);
+
+                fs.writeFile('./Examples/Square.svg', output, (err) => 
+                    err ? console.error(err) : console.log("Successfully created square")
+                );
             }
         });
 }
