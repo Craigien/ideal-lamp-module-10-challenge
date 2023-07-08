@@ -102,4 +102,4 @@ function createSquare(charactersInput, textColorInput, shapeColorInput)
     return renderSquare;
 }
 
-module.exports = {createCircle, createTriangle, createSquare};
+module.exports = {createCircle, createTriangle, createSquare, Shape, Circle, Triangle, Square};
