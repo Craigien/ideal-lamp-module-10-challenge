@@ -15,7 +15,7 @@ To start the application, run the command "node index.js" in your terminal.  You
 
 To run the function tests, run the command "npm run test".  This will test the creation of three different SVG text outputs using the three different shapes.
 
-SVG Logo Generator Video Demonstration: 
+SVG Logo Generator Video Demonstration: https://drive.google.com/file/d/1uHK8in8ASE4-j03H36nv3JDN7Qawx272/view?usp=sharing
 
 ## Credits
 
