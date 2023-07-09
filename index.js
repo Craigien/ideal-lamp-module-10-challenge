@@ -1,8 +1,11 @@
+// Import libraries for inquirer and fs
 const inquirer = require('inquirer');
 const fs = require('fs');
+
+// Import functions from shapes.js
 const shapes = require('./lib/shapes.js');
 
-
+// Use inquirer to get user input for SVG creation
 function getUserInput()
 {
     inquirer
@@ -11,6 +14,17 @@ function getUserInput()
                 type: 'input',
                 message: 'Please enter up to three characters that you would like to see in the logo',
                 name: 'characters',
+                validate: (characters) => {
+                    if (characters.length < 1 || characters.length > 3)
+                    {
+                        return 'Please enter up to three characters that you would like to see in the logo'
+                    }
+
+                    else
+                    {
+                        return true;
+                    }
+                }
             },
 
             {
@@ -32,6 +46,7 @@ function getUserInput()
                 name: 'shapeColor',
             },
         ])
+        // Create SVG file using functions in shapes.js depending on selected shape
         .then((response) => {
             console.log(response);
 
@@ -72,8 +87,9 @@ function getUserInput()
 
 getUserInput();
 
+module.exports = {getUserInput};
+
 // To Do
 
 // Use JEST to confirm that user entered valid inputs before generating SVG file
-// Comments
 // README

@@ -1,5 +1,7 @@
+// Require Circle, Triangle, and Square classes
 const {Circle, Triangle, Square} = require('./shapes.js');
 
+// Test for SVG text output for circle
 describe('Circle', () => {
     test('Should return text of an svg file that is a blue circle with the letters ABC in red', () => {
 
@@ -20,6 +22,7 @@ describe('Circle', () => {
     });
 });
 
+// Test for SVG text output for triangle
 describe('Triangle', () => {
     test('Should return text of an svg file that is a green triangle with the letters SVG in yellow', () => {
 
@@ -40,6 +43,7 @@ describe('Triangle', () => {
     });
 });
 
+// Test for SVG text output for square
 describe('Square', () => {
     test('Should return text of an svg file that is an orange square with the letters XYZ in purple', () => {
 
