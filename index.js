@@ -88,8 +88,3 @@ function getUserInput()
 getUserInput();
 
 module.exports = {getUserInput};
-
-// To Do
-
-// Use JEST to confirm that user entered valid inputs before generating SVG file
-// README
